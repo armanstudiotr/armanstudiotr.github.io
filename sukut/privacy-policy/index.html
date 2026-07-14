@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sükût Gizlilik Politikası">
+  <title>Sükût Gizlilik Politikası</title>
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #f6f7f5;
+      color: #1d2b25;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+    main {
+      width: min(100% - 32px, 820px);
+      margin: 32px auto;
+      padding: clamp(24px, 5vw, 56px);
+      background: #ffffff;
+      border: 1px solid #dce4dd;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(23, 50, 38, 0.08);
+    }
+    h1, h2 { color: #144c38; line-height: 1.25; }
+    h1 { margin: 0; font-size: clamp(1.9rem, 5vw, 2.7rem); }
+    h2 { margin: 2.1rem 0 0.7rem; font-size: 1.25rem; }
+    p, ul { margin: 0 0 1rem; }
+    ul { padding-left: 1.25rem; }
+    li + li { margin-top: 0.35rem; }
+    .date { margin: 0.65rem 0 2rem; color: #52635b; }
+    a { color: #0d6a4d; overflow-wrap: anywhere; }
+    footer { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid #dce4dd; color: #52635b; }
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      main { width: 100%; margin: 0; padding: 0; border: 0; box-shadow: none; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Sükût Gizlilik Politikası</h1>
+    <p class="date"><strong>Yürürlük tarihi:</strong> 14 Temmuz 2026</p>
+
+    <p>Sükût, Arman Studio tarafından sunulan bir namaz vakti uygulamasıdır. Bu politika, uygulamanın veri işleme davranışını açıklar.</p>
+
+    <h2>1. Kullanıcı hesabı ve kişisel bilgiler</h2>
+    <p>Sükût'ta kullanıcı hesabı veya giriş sistemi yoktur. Uygulama ad, soyad, e-posta adresi, telefon numarası ya da ödeme bilgisi istemez. Uygulama içinde abonelik, uygulama içi satın alma veya ödeme işlemi bulunmaz.</p>
+
+    <h2>2. Reklam, analiz ve takip</h2>
+    <p>Sükût'ta reklam yoktur. AdMob, Firebase Analytics veya başka bir analiz SDK'sı kullanılmaz. Crash-reporting ya da kullanıcı takip SDK'sı da bulunmaz.</p>
+
+    <h2>3. Konum verisi ve namaz vakitleri</h2>
+    <p>Konum izni isteğe bağlıdır. GPS konumu seçildiğinde enlem ve boylam bilgileri, namaz vakitlerini almak amacıyla HTTPS üzerinden Aladhan API'ye gönderilir. Manuel şehir seçildiğinde ise seçilen şehir adı aynı amaçla Aladhan API'ye gönderilir.</p>
+    <p>GPS kullanmak yerine manuel şehir seçebilirsiniz. Konum bilgisi reklam, pazarlama veya kullanıcı profili oluşturmak için kullanılmaz.</p>
+    <p>İnternet bağlantısının teknik gereği olarak Aladhan sunucuları IP adresi gibi bağlantı bilgilerini görebilir. Aladhan'ın kendi veri saklama ve işleme uygulamaları Arman Studio'nun doğrudan kontrolünde değildir.</p>
+
+    <h2>4. Cihazda saklanan veriler</h2>
+    <p>Sükût aşağıdaki verileri cihazınızda yerel olarak saklayabilir:</p>
+    <ul>
+      <li>Seçilen şehir ve konum önbelleği</li>
+      <li>Namaz vakitleri ve Hicri tarih</li>
+      <li>Namaz takibi kayıtları ve kaza namazı sayıları</li>
+      <li>Tema, yazı boyutu ve diğer uygulama tercihleri</li>
+      <li>Ezan, Namaz Modu, bildirim ve alarm durumları</li>
+      <li>Widget verileri</li>
+      <li>Kilit ekranı ayeti tercihleri</li>
+    </ul>
+    <p>Kıble için kullanılan sensör verileri cihaz dışında gönderilmez ve kalıcı kullanıcı profili oluşturmak için kullanılmaz. Namaz takibi, kaza kayıtları ve uygulama tercihleri gibi yerel kullanıcı kayıtları Sükût tarafından cihaz dışına gönderilmez. Konum ve manuel şehir seçimiyle vakit alma işlemi bu kuralın istisnasıdır ve yukarıda açıklanmıştır.</p>
+
+    <h2>5. Yedekleme ve cihaz aktarımı</h2>
+    <p>Uygulama verileri Android bulut yedeklemesine dahil edilmez. Uygulama verileri cihazdan cihaza otomatik aktarıma da dahil edilmez. Bu nedenle yeni bir telefonda veya uygulamayı yeniden kurduğunuzda önceki yerel kayıtlarınız otomatik olarak geri gelmeyebilir.</p>
+
+    <h2>6. İzinler</h2>
+    <ul>
+      <li><strong>İnternet:</strong> Namaz vakitlerini Aladhan API'den almak için.</li>
+      <li><strong>Kesin ve yaklaşık konum:</strong> GPS ile vakit ve kıble hesaplamak için.</li>
+      <li><strong>Bildirimler:</strong> Ezan, sonraki vakit ve kilit ekranı ayeti bildirimleri için.</li>
+      <li><strong>Titreşim:</strong> Ezan ve arayüz geri bildirimi için.</li>
+      <li><strong>Tam alarm erişimi:</strong> Namaz vakti alarmlarını zamanında planlamak için.</li>
+      <li><strong>Rahatsız Etmeyin erişimi:</strong> Kullanıcı etkinleştirdiğinde Namaz Modu ve Cuma sessizliği için.</li>
+      <li><strong>Ses ayarlarını yönetme:</strong> Kullanıcının seçtiği ezan ve sessizlik davranışını uygulamak için.</li>
+      <li><strong>Cihaz yeniden başlatma bildirimi:</strong> Alarm zamanlamasını yeniden oluşturmak için.</li>
+      <li><strong>Foreground service:</strong> Kullanıcı etkinleştirdiğinde kilit ekranı ayeti özelliği için.</li>
+    </ul>
+    <p>Sükût kamera, mikrofon, kişiler, SMS, arama kayıtları, fotoğraflar, dosyalar, sağlık verileri veya reklam kimliğine erişmez.</p>
+
+    <h2>7. Üçüncü taraf hizmet</h2>
+    <p>Sükût'un aktif olarak kullandığı dış hizmet yalnız <a href="https://api.aladhan.com">Aladhan API</a>'dir. Bu hizmet namaz vakitlerini sağlamak için kullanılır. Aladhan'ın gizlilik uygulamaları Arman Studio'nun doğrudan kontrolü dışındadır.</p>
+
+    <h2>8. Verilerin silinmesi</h2>
+    <p>Uygulama içindeki sıfırlama seçeneği yerel kullanıcı verilerinin önemli bir bölümünü temizler. Tam temizlik için Android Ayarlar &gt; Uygulamalar &gt; Sükût &gt; Depolama &gt; Verileri temizle yolunu kullanabilirsiniz.</p>
+    <p>Uygulamayı kaldırdığınızda cihazınızdaki uygulama verileri Android'in normal kaldırma işlemi kapsamında silinir. Sükût'ta kullanıcı hesabı veya geliştirici tarafından işletilen kullanıcı veri hesabı bulunmadığından hesap silme işlemi yoktur.</p>
+
+    <h2>9. Çocukların gizliliği</h2>
+    <p>Sükût özellikle çocukları hedeflemez ve çocuklardan bilinçli olarak kişisel bilgi istemez.</p>
+
+    <h2>10. Güvenlik</h2>
+    <p>Namaz vakitleri için yapılan ağ bağlantıları HTTPS kullanır. Verilerin gereksiz biçimde toplanmaması yaklaşımı benimsenir. Bununla birlikte hiçbir dijital sistem için mutlak güvenlik garantisi verilemez.</p>
+
+    <h2>11. Politika değişiklikleri</h2>
+    <p>Uygulama veya veri işleme uygulamaları değiştiğinde bu politika güncellenebilir. Güncel yürürlük tarihi bu sayfada gösterilir.</p>
+
+    <h2>12. İletişim</h2>
+    <p><strong>Geliştirici:</strong> Arman Studio<br>
+      <strong>Destek e-postası:</strong> <a href="mailto:sukut.destek@gmail.com">sukut.destek@gmail.com</a><br>
+      <strong>Genel geliştirici e-postası:</strong> <a href="mailto:armanstudio.tr@gmail.com">armanstudio.tr@gmail.com</a></p>
+
+    <footer>Arman Studio</footer>
+  </main>
+</body>
+</html>
