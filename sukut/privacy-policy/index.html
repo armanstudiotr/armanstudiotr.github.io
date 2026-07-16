@@ -55,9 +55,9 @@
     <p>Sükût'ta reklam yoktur. AdMob, Firebase Analytics veya başka bir analiz SDK'sı kullanılmaz. Crash-reporting ya da kullanıcı takip SDK'sı da bulunmaz. Veriler reklam, pazarlama veya kullanıcı profili oluşturmak için kullanılmaz.</p>
 
     <h2>3. Konum verisi ve namaz vakitleri</h2>
-    <p>Konum izni isteğe bağlıdır. GPS konumu seçildiğinde kesin veya yaklaşık enlem ve boylam bilgileri, namaz vakitlerini almak amacıyla HTTPS üzerinden <a href="https://api.aladhan.com">Aladhan API</a>'ye gönderilir. Yer veya şehir adının belirlenmesi gerektiğinde konum bilgisi HTTPS üzerinden <a href="https://nominatim.openstreetmap.org">OpenStreetMap Nominatim</a> hizmetine de gönderilebilir. Manuel şehir seçildiğinde seçilen şehir adı namaz vakitlerini almak amacıyla Aladhan API'ye gönderilir.</p>
+    <p>Konum izni isteğe bağlıdır. GPS konumu seçildiğinde kesin veya yaklaşık enlem ve boylam bilgileri, namaz vakitlerini almak amacıyla HTTPS üzerinden Aladhan API'ye gönderilir. Manuel şehir seçildiğinde seçilen şehir adı aynı amaçla Aladhan API'ye gönderilir.</p>
     <p>GPS kullanmak yerine manuel şehir seçebilirsiniz. Arman Studio bu konum isteklerinden bir kullanıcı konum geçmişi oluşturmaz ve kendisine ait bir sunucuda konum verisi saklamaz.</p>
-    <p>İnternet bağlantısının teknik gereği olarak ilgili hizmetler IP adresi, istek zamanı ve bağlantı bilgileri gibi teknik verileri görebilir. Aladhan ve Nominatim'in kendi veri saklama ve işleme uygulamaları Arman Studio'nun doğrudan kontrolünde değildir.</p>
+    <p>İnternet bağlantısının teknik gereği olarak Aladhan; IP adresi, istek zamanı ve bağlantı bilgileri gibi teknik verileri görebilir. Aladhan'ın kendi veri saklama ve işleme uygulamaları Arman Studio'nun doğrudan kontrolünde değildir.</p>
 
     <h2>4. Cihazda saklanan veriler</h2>
     <p>Sükût aşağıdaki verileri cihazınızda yerel olarak saklayabilir:</p>
@@ -70,25 +70,19 @@
       <li>Widget verileri</li>
       <li>Kilit ekranı ayeti tercihleri</li>
     </ul>
-    <p>Kıble için kullanılan sensör verileri cihaz dışında gönderilmez ve kalıcı kullanıcı profili oluşturmak için kullanılmaz. Yerel kullanıcı kayıtları Arman Studio'ya ait bir sunucuya gönderilmez. Ancak Android otomatik yedeklemesi açıksa uygulamanın yedekleme için hazırladığı kullanıcı verileri, aşağıda açıklanan Android sistem yedeklemesine veya cihaz aktarımına dahil olabilir.</p>
+    <p>Kıble için kullanılan sensör verileri cihaz dışında gönderilmez ve kalıcı kullanıcı profili oluşturmak için kullanılmaz. Yerel kullanıcı kayıtları Arman Studio'ya ait bir sunucuya gönderilmez. Ancak Android otomatik yedeklemesi açıksa uygulamanın yedekleme için hazırladığı seçili takip verileri ve tercihler, aşağıda açıklanan Android sistem yedeklemesine veya cihaz aktarımına dahil olabilir.</p>
 
     <h2>5. Android yedekleme ve cihaz aktarımı</h2>
-    <p>Sükût, telefon değiştirme veya yeniden kurulum durumunda kullanıcı verilerinin geri gelebilmesi için Android'in otomatik yedekleme ve cihazdan cihaza aktarım özelliklerini destekler. Yedekleme, yalnızca uygulamanın yedekleme için hazırladığı <code>sukut-user-backup.json</code> kullanıcı veri dosyasıyla sınırlandırılmıştır.</p>
-    <ul>
-      <li>Bulut yedeklemesi yalnız Android yedekleme hizmeti cihazda etkinse çalışır.</li>
-      <li>Bulut yedeklemesi, cihazın gerekli şifreleme kabiliyetine sahip olması şartıyla kullanılabilir.</li>
-      <li>Cihazdan cihaza aktarım, Android'in kurulum ve veri taşıma süreci tarafından yönetilir.</li>
-      <li>Yedekleme zamanını, saklama süresini ve geri yükleme sonucunu Android/Google veya cihaz üreticisinin yedekleme sistemi belirler; Arman Studio bu yedeklere doğrudan erişemez.</li>
-    </ul>
-    <p>Otomatik yedeklemeyi Android'in yedekleme ayarlarından açabilir veya kapatabilirsiniz. Uygulamadaki manuel dışa aktarma ve geri yükleme seçeneklerini kullandığınızda seçtiğiniz dosyanın saklanacağı konumu siz belirlersiniz.</p>
+    <p>Sükût, telefon değiştirme veya yeniden kurulum durumunda desteklenen kullanıcı verilerinin geri gelebilmesi için Android'in otomatik yedekleme ve cihazdan cihaza aktarım özelliklerini destekler. Yedekleme; namaz/kaza takibi, zikirmatik durumu ve seçili uygulama tercihlerini içeren <code>sukut-user-backup.json</code> dosyasıyla sınırlandırılmıştır. Konum ve sistem izinleri bu yedeğe dahil edilmez.</p>
+    <p>Bulut yedeklemesi yalnız Android yedekleme hizmeti cihazda etkinse ve gerekli şifreleme kabiliyeti bulunuyorsa çalışır. Yedekleme zamanını, saklama süresini ve geri yükleme sonucunu Android/Google veya cihaz üreticisinin sistemi belirler; Arman Studio bu yedeklere doğrudan erişemez. Otomatik yedeklemeyi Android'in yedekleme ayarlarından yönetebilirsiniz. Manuel dışa aktarma kullandığınızda dosyanın saklanacağı konumu siz seçersiniz.</p>
 
     <h2>6. İzinler</h2>
     <ul>
-      <li><strong>İnternet:</strong> Namaz vakitlerini almak ve gerektiğinde yer/şehir adını belirlemek için.</li>
-      <li><strong>Kesin ve yaklaşık konum:</strong> Kullanıcı seçtiğinde GPS ile vakit ve kıble hesaplamak için.</li>
+      <li><strong>İnternet:</strong> Namaz vakitlerini Aladhan API'den almak için.</li>
+      <li><strong>Kesin ve yaklaşık konum:</strong> GPS ile vakit ve kıble hesaplamak için.</li>
       <li><strong>Bildirimler:</strong> Ezan, sonraki vakit ve kilit ekranı ayeti bildirimleri için.</li>
       <li><strong>Titreşim:</strong> Ezan ve arayüz geri bildirimi için.</li>
-      <li><strong>Tam alarm erişimi:</strong> Kullanıcı izin verdiğinde namaz vakti alarmlarını zamanında planlamak için.</li>
+      <li><strong>Tam alarm erişimi:</strong> Namaz vakti alarmlarını zamanında planlamak için.</li>
       <li><strong>Rahatsız Etmeyin erişimi:</strong> Kullanıcı etkinleştirdiğinde Namaz Modu ve Cuma sessizliği için.</li>
       <li><strong>Ses ayarlarını yönetme:</strong> Kullanıcının seçtiği ezan ve sessizlik davranışını uygulamak için.</li>
       <li><strong>Cihaz yeniden başlatma bildirimi:</strong> Alarm zamanlamasını yeniden oluşturmak için.</li>
@@ -98,9 +92,8 @@
 
     <h2>7. Üçüncü taraf ve sistem hizmetleri</h2>
     <ul>
-      <li><a href="https://api.aladhan.com">Aladhan API</a>: Konum veya şehir bilgisine göre namaz vakitlerini sağlamak için.</li>
-      <li><a href="https://nominatim.openstreetmap.org">OpenStreetMap Nominatim</a>: Gerektiğinde konumdan yer veya şehir adı belirlemek için.</li>
-      <li><a href="https://policies.google.com/privacy">Android/Google yedekleme hizmeti</a>: Kullanıcı cihazında etkinse şifreli sistem yedeklemesi ve geri yükleme için.</li>
+      <li><strong>Aladhan API:</strong> Konum veya şehir bilgisine göre namaz vakitlerini sağlamak için: <a href="https://api.aladhan.com">api.aladhan.com</a></li>
+      <li><strong>Android/Google yedekleme hizmeti:</strong> Kullanıcı cihazında etkinse şifreli sistem yedeklemesi, cihaz aktarımı ve geri yükleme için.</li>
     </ul>
     <p>Bu hizmetlerin kendi gizlilik, güvenlik ve saklama uygulamaları Arman Studio'nun doğrudan kontrolü dışındadır.</p>
 
