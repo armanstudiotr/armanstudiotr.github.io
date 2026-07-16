@@ -44,63 +44,75 @@
 <body>
   <main>
     <h1>Sükût Gizlilik Politikası</h1>
-    <p class="date"><strong>Yürürlük tarihi:</strong> 14 Temmuz 2026</p>
+    <p class="date"><strong>Yürürlük tarihi:</strong> 16 Temmuz 2026</p>
 
-    <p>Sükût, Arman Studio tarafından sunulan bir namaz vakti uygulamasıdır. Bu politika, uygulamanın veri işleme davranışını açıklar.</p>
+    <p>Sükût, Arman Studio tarafından sunulan bir namaz vakti uygulamasıdır. Bu politika, uygulamanın hangi verileri neden işlediğini, hangi bilgilerin cihazda kaldığını ve isteğe bağlı Android yedeklemesinin nasıl çalıştığını açıklar.</p>
 
     <h2>1. Kullanıcı hesabı ve kişisel bilgiler</h2>
     <p>Sükût'ta kullanıcı hesabı veya giriş sistemi yoktur. Uygulama ad, soyad, e-posta adresi, telefon numarası ya da ödeme bilgisi istemez. Uygulama içinde abonelik, uygulama içi satın alma veya ödeme işlemi bulunmaz.</p>
 
     <h2>2. Reklam, analiz ve takip</h2>
-    <p>Sükût'ta reklam yoktur. AdMob, Firebase Analytics veya başka bir analiz SDK'sı kullanılmaz. Crash-reporting ya da kullanıcı takip SDK'sı da bulunmaz.</p>
+    <p>Sükût'ta reklam yoktur. AdMob, Firebase Analytics veya başka bir analiz SDK'sı kullanılmaz. Crash-reporting ya da kullanıcı takip SDK'sı da bulunmaz. Veriler reklam, pazarlama veya kullanıcı profili oluşturmak için kullanılmaz.</p>
 
     <h2>3. Konum verisi ve namaz vakitleri</h2>
-    <p>Konum izni isteğe bağlıdır. GPS konumu seçildiğinde enlem ve boylam bilgileri, namaz vakitlerini almak amacıyla HTTPS üzerinden Aladhan API'ye gönderilir. Manuel şehir seçildiğinde ise seçilen şehir adı aynı amaçla Aladhan API'ye gönderilir.</p>
-    <p>GPS kullanmak yerine manuel şehir seçebilirsiniz. Konum bilgisi reklam, pazarlama veya kullanıcı profili oluşturmak için kullanılmaz.</p>
-    <p>İnternet bağlantısının teknik gereği olarak Aladhan sunucuları IP adresi gibi bağlantı bilgilerini görebilir. Aladhan'ın kendi veri saklama ve işleme uygulamaları Arman Studio'nun doğrudan kontrolünde değildir.</p>
+    <p>Konum izni isteğe bağlıdır. GPS konumu seçildiğinde kesin veya yaklaşık enlem ve boylam bilgileri, namaz vakitlerini almak amacıyla HTTPS üzerinden <a href="https://api.aladhan.com">Aladhan API</a>'ye gönderilir. Yer veya şehir adının belirlenmesi gerektiğinde konum bilgisi HTTPS üzerinden <a href="https://nominatim.openstreetmap.org">OpenStreetMap Nominatim</a> hizmetine de gönderilebilir. Manuel şehir seçildiğinde seçilen şehir adı namaz vakitlerini almak amacıyla Aladhan API'ye gönderilir.</p>
+    <p>GPS kullanmak yerine manuel şehir seçebilirsiniz. Arman Studio bu konum isteklerinden bir kullanıcı konum geçmişi oluşturmaz ve kendisine ait bir sunucuda konum verisi saklamaz.</p>
+    <p>İnternet bağlantısının teknik gereği olarak ilgili hizmetler IP adresi, istek zamanı ve bağlantı bilgileri gibi teknik verileri görebilir. Aladhan ve Nominatim'in kendi veri saklama ve işleme uygulamaları Arman Studio'nun doğrudan kontrolünde değildir.</p>
 
     <h2>4. Cihazda saklanan veriler</h2>
     <p>Sükût aşağıdaki verileri cihazınızda yerel olarak saklayabilir:</p>
     <ul>
       <li>Seçilen şehir ve konum önbelleği</li>
       <li>Namaz vakitleri ve Hicri tarih</li>
-      <li>Namaz takibi kayıtları ve kaza namazı sayıları</li>
+      <li>Namaz takibi kayıtları, kaza namazı sayıları ve zikirmatik verileri</li>
       <li>Tema, yazı boyutu ve diğer uygulama tercihleri</li>
       <li>Ezan, Namaz Modu, bildirim ve alarm durumları</li>
       <li>Widget verileri</li>
       <li>Kilit ekranı ayeti tercihleri</li>
     </ul>
-    <p>Kıble için kullanılan sensör verileri cihaz dışında gönderilmez ve kalıcı kullanıcı profili oluşturmak için kullanılmaz. Namaz takibi, kaza kayıtları ve uygulama tercihleri gibi yerel kullanıcı kayıtları Sükût tarafından cihaz dışına gönderilmez. Konum ve manuel şehir seçimiyle vakit alma işlemi bu kuralın istisnasıdır ve yukarıda açıklanmıştır.</p>
+    <p>Kıble için kullanılan sensör verileri cihaz dışında gönderilmez ve kalıcı kullanıcı profili oluşturmak için kullanılmaz. Yerel kullanıcı kayıtları Arman Studio'ya ait bir sunucuya gönderilmez. Ancak Android otomatik yedeklemesi açıksa uygulamanın yedekleme için hazırladığı kullanıcı verileri, aşağıda açıklanan Android sistem yedeklemesine veya cihaz aktarımına dahil olabilir.</p>
 
-    <h2>5. Yedekleme ve cihaz aktarımı</h2>
-    <p>Uygulama verileri Android bulut yedeklemesine dahil edilmez. Uygulama verileri cihazdan cihaza otomatik aktarıma da dahil edilmez. Bu nedenle yeni bir telefonda veya uygulamayı yeniden kurduğunuzda önceki yerel kayıtlarınız otomatik olarak geri gelmeyebilir.</p>
+    <h2>5. Android yedekleme ve cihaz aktarımı</h2>
+    <p>Sükût, telefon değiştirme veya yeniden kurulum durumunda kullanıcı verilerinin geri gelebilmesi için Android'in otomatik yedekleme ve cihazdan cihaza aktarım özelliklerini destekler. Yedekleme, yalnızca uygulamanın yedekleme için hazırladığı <code>sukut-user-backup.json</code> kullanıcı veri dosyasıyla sınırlandırılmıştır.</p>
+    <ul>
+      <li>Bulut yedeklemesi yalnız Android yedekleme hizmeti cihazda etkinse çalışır.</li>
+      <li>Bulut yedeklemesi, cihazın gerekli şifreleme kabiliyetine sahip olması şartıyla kullanılabilir.</li>
+      <li>Cihazdan cihaza aktarım, Android'in kurulum ve veri taşıma süreci tarafından yönetilir.</li>
+      <li>Yedekleme zamanını, saklama süresini ve geri yükleme sonucunu Android/Google veya cihaz üreticisinin yedekleme sistemi belirler; Arman Studio bu yedeklere doğrudan erişemez.</li>
+    </ul>
+    <p>Otomatik yedeklemeyi Android'in yedekleme ayarlarından açabilir veya kapatabilirsiniz. Uygulamadaki manuel dışa aktarma ve geri yükleme seçeneklerini kullandığınızda seçtiğiniz dosyanın saklanacağı konumu siz belirlersiniz.</p>
 
     <h2>6. İzinler</h2>
     <ul>
-      <li><strong>İnternet:</strong> Namaz vakitlerini Aladhan API'den almak için.</li>
-      <li><strong>Kesin ve yaklaşık konum:</strong> GPS ile vakit ve kıble hesaplamak için.</li>
+      <li><strong>İnternet:</strong> Namaz vakitlerini almak ve gerektiğinde yer/şehir adını belirlemek için.</li>
+      <li><strong>Kesin ve yaklaşık konum:</strong> Kullanıcı seçtiğinde GPS ile vakit ve kıble hesaplamak için.</li>
       <li><strong>Bildirimler:</strong> Ezan, sonraki vakit ve kilit ekranı ayeti bildirimleri için.</li>
       <li><strong>Titreşim:</strong> Ezan ve arayüz geri bildirimi için.</li>
-      <li><strong>Tam alarm erişimi:</strong> Namaz vakti alarmlarını zamanında planlamak için.</li>
+      <li><strong>Tam alarm erişimi:</strong> Kullanıcı izin verdiğinde namaz vakti alarmlarını zamanında planlamak için.</li>
       <li><strong>Rahatsız Etmeyin erişimi:</strong> Kullanıcı etkinleştirdiğinde Namaz Modu ve Cuma sessizliği için.</li>
       <li><strong>Ses ayarlarını yönetme:</strong> Kullanıcının seçtiği ezan ve sessizlik davranışını uygulamak için.</li>
       <li><strong>Cihaz yeniden başlatma bildirimi:</strong> Alarm zamanlamasını yeniden oluşturmak için.</li>
-      <li><strong>Foreground service:</strong> Kullanıcı etkinleştirdiğinde kilit ekranı ayeti özelliği için.</li>
+      <li><strong>Foreground service:</strong> Ezan ses oturumunu ve kullanıcı etkinleştirdiğinde kilit ekranı ayeti özelliğini güvenilir biçimde çalıştırmak için.</li>
     </ul>
     <p>Sükût kamera, mikrofon, kişiler, SMS, arama kayıtları, fotoğraflar, dosyalar, sağlık verileri veya reklam kimliğine erişmez.</p>
 
-    <h2>7. Üçüncü taraf hizmet</h2>
-    <p>Sükût'un aktif olarak kullandığı dış hizmet yalnız <a href="https://api.aladhan.com">Aladhan API</a>'dir. Bu hizmet namaz vakitlerini sağlamak için kullanılır. Aladhan'ın gizlilik uygulamaları Arman Studio'nun doğrudan kontrolü dışındadır.</p>
+    <h2>7. Üçüncü taraf ve sistem hizmetleri</h2>
+    <ul>
+      <li><a href="https://api.aladhan.com">Aladhan API</a>: Konum veya şehir bilgisine göre namaz vakitlerini sağlamak için.</li>
+      <li><a href="https://nominatim.openstreetmap.org">OpenStreetMap Nominatim</a>: Gerektiğinde konumdan yer veya şehir adı belirlemek için.</li>
+      <li><a href="https://policies.google.com/privacy">Android/Google yedekleme hizmeti</a>: Kullanıcı cihazında etkinse şifreli sistem yedeklemesi ve geri yükleme için.</li>
+    </ul>
+    <p>Bu hizmetlerin kendi gizlilik, güvenlik ve saklama uygulamaları Arman Studio'nun doğrudan kontrolü dışındadır.</p>
 
     <h2>8. Verilerin silinmesi</h2>
     <p>Uygulama içindeki sıfırlama seçeneği yerel kullanıcı verilerinin önemli bir bölümünü temizler. Tam temizlik için Android Ayarlar &gt; Uygulamalar &gt; Sükût &gt; Depolama &gt; Verileri temizle yolunu kullanabilirsiniz.</p>
-    <p>Uygulamayı kaldırdığınızda cihazınızdaki uygulama verileri Android'in normal kaldırma işlemi kapsamında silinir. Sükût'ta kullanıcı hesabı veya geliştirici tarafından işletilen kullanıcı veri hesabı bulunmadığından hesap silme işlemi yoktur.</p>
+    <p>Uygulamayı kaldırdığınızda cihazdaki uygulama verileri Android'in normal kaldırma işlemi kapsamında silinir. Android sistem yedeklemesinde bulunan bir kopya, cihaz veya Google hesabı yedekleme ayarlarında ayrıca yönetilebilir. Sükût'ta kullanıcı hesabı veya geliştirici tarafından işletilen kullanıcı veri hesabı bulunmadığından Arman Studio'ya gönderilecek bir hesap silme talebi yoktur.</p>
 
     <h2>9. Çocukların gizliliği</h2>
     <p>Sükût özellikle çocukları hedeflemez ve çocuklardan bilinçli olarak kişisel bilgi istemez.</p>
 
     <h2>10. Güvenlik</h2>
-    <p>Namaz vakitleri için yapılan ağ bağlantıları HTTPS kullanır. Verilerin gereksiz biçimde toplanmaması yaklaşımı benimsenir. Bununla birlikte hiçbir dijital sistem için mutlak güvenlik garantisi verilemez.</p>
+    <p>Dış hizmetlere yapılan ağ bağlantıları HTTPS kullanır. Android bulut yedeklemesi yalnız gerekli sistem şifreleme kabiliyeti bulunduğunda kullanılacak şekilde sınırlandırılmıştır. Verilerin gereksiz biçimde toplanmaması yaklaşımı benimsenir. Bununla birlikte hiçbir dijital sistem için mutlak güvenlik garantisi verilemez.</p>
 
     <h2>11. Politika değişiklikleri</h2>
     <p>Uygulama veya veri işleme uygulamaları değiştiğinde bu politika güncellenebilir. Güncel yürürlük tarihi bu sayfada gösterilir.</p>
