@@ -55,9 +55,9 @@
     <p>Sükût'ta reklam yoktur. AdMob, Firebase Analytics veya başka bir analiz SDK'sı kullanılmaz. Crash-reporting ya da kullanıcı takip SDK'sı da bulunmaz. Veriler reklam, pazarlama veya kullanıcı profili oluşturmak için kullanılmaz.</p>
 
     <h2>3. Konum verisi ve namaz vakitleri</h2>
-    <p>Konum izni isteğe bağlıdır. GPS konumu seçildiğinde kesin veya yaklaşık enlem ve boylam bilgileri, namaz vakitlerini almak amacıyla HTTPS üzerinden Aladhan API'ye; konumu okunabilir bir yer veya şehir adına dönüştürmek amacıyla Nominatim hizmetine gönderilebilir. Manuel şehir seçildiğinde seçilen şehir adı, namaz vakitlerini almak amacıyla Aladhan API'ye gönderilir.</p>
+    <p>Konum izni isteğe bağlıdır. GPS konumu seçildiğinde kesin veya yaklaşık enlem ve boylam bilgileri, namaz vakitlerini almak amacıyla HTTPS üzerinden Aladhan API'ye gönderilir. Uygulamada gösterilen yaklaşık şehir etiketi, cihazdaki 81 il merkezi verisi kullanılarak cihaz üzerinde belirlenir ve bunun için başka bir konum hizmetine gönderilmez. Manuel şehir seçildiğinde seçilen şehir adı, namaz vakitlerini almak amacıyla Aladhan API'ye gönderilir.</p>
     <p>GPS kullanmak yerine manuel şehir seçebilirsiniz. Konum aktarımı yalnız ilgili özellik kullanıldığında gerçekleşir. Arman Studio bu konum isteklerinden bir kullanıcı konum geçmişi oluşturmaz ve kendisine ait bir sunucuda konum verisi saklamaz.</p>
-    <p>İnternet bağlantısının teknik gereği olarak Aladhan ve Nominatim; IP adresi, istek zamanı ve bağlantı bilgileri gibi teknik verileri görebilir. Bu hizmetlerin kendi veri saklama ve işleme uygulamaları Arman Studio'nun doğrudan kontrolünde değildir.</p>
+    <p>İnternet bağlantısının teknik gereği olarak Aladhan; IP adresi, istek zamanı ve bağlantı bilgileri gibi teknik verileri görebilir. Bu hizmetin kendi veri saklama ve işleme uygulamaları Arman Studio'nun doğrudan kontrolünde değildir.</p>
 
     <h2>4. Cihazda saklanan veriler</h2>
     <p>Sükût aşağıdaki verileri cihazınızda yerel olarak saklayabilir:</p>
@@ -78,7 +78,7 @@
 
     <h2>6. İzinler</h2>
     <ul>
-      <li><strong>İnternet:</strong> Namaz vakitlerini Aladhan API'den almak ve GPS konumunu Nominatim ile okunabilir yer adına dönüştürmek için.</li>
+      <li><strong>İnternet:</strong> Konum veya şehir bilgisine göre namaz vakitlerini Aladhan API'den almak için.</li>
       <li><strong>Kesin ve yaklaşık konum:</strong> GPS ile vakit ve kıble hesaplamak için.</li>
       <li><strong>Bildirimler:</strong> Ezan, sonraki vakit ve isteğe bağlı günlük ayet bildirimi için.</li>
       <li><strong>Titreşim:</strong> Ezan ve arayüz geri bildirimi için.</li>
@@ -92,7 +92,6 @@
     <h2>7. Üçüncü taraf ve sistem hizmetleri</h2>
     <ul>
       <li><strong>Aladhan API:</strong> Konum veya şehir bilgisine göre namaz vakitlerini sağlamak için: <a href="https://api.aladhan.com">api.aladhan.com</a></li>
-      <li><strong>Nominatim:</strong> GPS koordinatlarını okunabilir yer veya şehir adına dönüştürmek için: <a href="https://nominatim.openstreetmap.org">nominatim.openstreetmap.org</a></li>
       <li><strong>Android/Google yedekleme hizmeti:</strong> Kullanıcı cihazında etkinse şifreli sistem yedeklemesi, cihaz aktarımı ve geri yükleme için.</li>
     </ul>
     <p>Bu hizmetlerin kendi gizlilik, güvenlik ve saklama uygulamaları Arman Studio'nun doğrudan kontrolü dışındadır.</p>
