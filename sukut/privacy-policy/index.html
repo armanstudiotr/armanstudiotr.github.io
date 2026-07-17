@@ -44,7 +44,7 @@
 <body>
   <main>
     <h1>Sükût Gizlilik Politikası</h1>
-    <p class="date"><strong>Yürürlük tarihi:</strong> 16 Temmuz 2026</p>
+    <p class="date"><strong>Yürürlük tarihi:</strong> 18 Temmuz 2026</p>
 
     <p>Sükût, Arman Studio tarafından sunulan bir namaz vakti uygulamasıdır. Bu politika, uygulamanın hangi verileri neden işlediğini, hangi bilgilerin cihazda kaldığını ve isteğe bağlı Android yedeklemesinin nasıl çalıştığını açıklar.</p>
 
@@ -55,9 +55,9 @@
     <p>Sükût'ta reklam yoktur. AdMob, Firebase Analytics veya başka bir analiz SDK'sı kullanılmaz. Crash-reporting ya da kullanıcı takip SDK'sı da bulunmaz. Veriler reklam, pazarlama veya kullanıcı profili oluşturmak için kullanılmaz.</p>
 
     <h2>3. Konum verisi ve namaz vakitleri</h2>
-    <p>Konum izni isteğe bağlıdır. GPS konumu seçildiğinde kesin veya yaklaşık enlem ve boylam bilgileri, namaz vakitlerini almak amacıyla HTTPS üzerinden Aladhan API'ye gönderilir. Manuel şehir seçildiğinde seçilen şehir adı aynı amaçla Aladhan API'ye gönderilir.</p>
-    <p>GPS kullanmak yerine manuel şehir seçebilirsiniz. Arman Studio bu konum isteklerinden bir kullanıcı konum geçmişi oluşturmaz ve kendisine ait bir sunucuda konum verisi saklamaz.</p>
-    <p>İnternet bağlantısının teknik gereği olarak Aladhan; IP adresi, istek zamanı ve bağlantı bilgileri gibi teknik verileri görebilir. Aladhan'ın kendi veri saklama ve işleme uygulamaları Arman Studio'nun doğrudan kontrolünde değildir.</p>
+    <p>Konum izni isteğe bağlıdır. GPS konumu seçildiğinde kesin veya yaklaşık enlem ve boylam bilgileri, namaz vakitlerini almak amacıyla HTTPS üzerinden Aladhan API'ye; konumu okunabilir bir yer veya şehir adına dönüştürmek amacıyla Nominatim hizmetine gönderilebilir. Manuel şehir seçildiğinde seçilen şehir adı, namaz vakitlerini almak amacıyla Aladhan API'ye gönderilir.</p>
+    <p>GPS kullanmak yerine manuel şehir seçebilirsiniz. Konum aktarımı yalnız ilgili özellik kullanıldığında gerçekleşir. Arman Studio bu konum isteklerinden bir kullanıcı konum geçmişi oluşturmaz ve kendisine ait bir sunucuda konum verisi saklamaz.</p>
+    <p>İnternet bağlantısının teknik gereği olarak Aladhan ve Nominatim; IP adresi, istek zamanı ve bağlantı bilgileri gibi teknik verileri görebilir. Bu hizmetlerin kendi veri saklama ve işleme uygulamaları Arman Studio'nun doğrudan kontrolünde değildir.</p>
 
     <h2>4. Cihazda saklanan veriler</h2>
     <p>Sükût aşağıdaki verileri cihazınızda yerel olarak saklayabilir:</p>
@@ -68,7 +68,7 @@
       <li>Tema, yazı boyutu ve diğer uygulama tercihleri</li>
       <li>Ezan, Namaz Modu, bildirim ve alarm durumları</li>
       <li>Widget verileri</li>
-      <li>Kilit ekranı ayeti tercihleri</li>
+      <li>Günde bir kez gösterilebilen Günün Ayeti bildirimi tercihleri</li>
     </ul>
     <p>Kıble için kullanılan sensör verileri cihaz dışında gönderilmez ve kalıcı kullanıcı profili oluşturmak için kullanılmaz. Yerel kullanıcı kayıtları Arman Studio'ya ait bir sunucuya gönderilmez. Ancak Android otomatik yedeklemesi açıksa uygulamanın yedekleme için hazırladığı seçili takip verileri ve tercihler, aşağıda açıklanan Android sistem yedeklemesine veya cihaz aktarımına dahil olabilir.</p>
 
@@ -78,21 +78,21 @@
 
     <h2>6. İzinler</h2>
     <ul>
-      <li><strong>İnternet:</strong> Namaz vakitlerini Aladhan API'den almak için.</li>
+      <li><strong>İnternet:</strong> Namaz vakitlerini Aladhan API'den almak ve GPS konumunu Nominatim ile okunabilir yer adına dönüştürmek için.</li>
       <li><strong>Kesin ve yaklaşık konum:</strong> GPS ile vakit ve kıble hesaplamak için.</li>
-      <li><strong>Bildirimler:</strong> Ezan, sonraki vakit ve kilit ekranı ayeti bildirimleri için.</li>
+      <li><strong>Bildirimler:</strong> Ezan, sonraki vakit ve isteğe bağlı günlük ayet bildirimi için.</li>
       <li><strong>Titreşim:</strong> Ezan ve arayüz geri bildirimi için.</li>
-      <li><strong>Tam alarm erişimi:</strong> Namaz vakti alarmlarını zamanında planlamak için.</li>
+      <li><strong>Tam alarm erişimi:</strong> Kullanıcı izin verdiğinde namaz vakti alarmlarını zamanında planlamak için.</li>
       <li><strong>Rahatsız Etmeyin erişimi:</strong> Kullanıcı etkinleştirdiğinde Namaz Modu ve Cuma sessizliği için.</li>
       <li><strong>Ses ayarlarını yönetme:</strong> Kullanıcının seçtiği ezan ve sessizlik davranışını uygulamak için.</li>
       <li><strong>Cihaz yeniden başlatma bildirimi:</strong> Alarm zamanlamasını yeniden oluşturmak için.</li>
-      <li><strong>Foreground service:</strong> Ezan ses oturumunu ve kullanıcı etkinleştirdiğinde kilit ekranı ayeti özelliğini güvenilir biçimde çalıştırmak için.</li>
     </ul>
     <p>Sükût kamera, mikrofon, kişiler, SMS, arama kayıtları, fotoğraflar, dosyalar, sağlık verileri veya reklam kimliğine erişmez.</p>
 
     <h2>7. Üçüncü taraf ve sistem hizmetleri</h2>
     <ul>
       <li><strong>Aladhan API:</strong> Konum veya şehir bilgisine göre namaz vakitlerini sağlamak için: <a href="https://api.aladhan.com">api.aladhan.com</a></li>
+      <li><strong>Nominatim:</strong> GPS koordinatlarını okunabilir yer veya şehir adına dönüştürmek için: <a href="https://nominatim.openstreetmap.org">nominatim.openstreetmap.org</a></li>
       <li><strong>Android/Google yedekleme hizmeti:</strong> Kullanıcı cihazında etkinse şifreli sistem yedeklemesi, cihaz aktarımı ve geri yükleme için.</li>
     </ul>
     <p>Bu hizmetlerin kendi gizlilik, güvenlik ve saklama uygulamaları Arman Studio'nun doğrudan kontrolü dışındadır.</p>
